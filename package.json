@@ -1,0 +1,20 @@
+{
+  "name": "shirabe",
+  "version": "1.0.0",
+  "description": "Pluggable survey tool kit for Chromium, Firefox, Webkit",
+  "scripts": {
+    "build": "lerna run build",
+    "lint": "lerna run lint",
+    "format": "lerna run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recruit-tech/shirabe.git"
+  },
+  "keywords": [],
+  "author": "progfay",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

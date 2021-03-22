@@ -1,0 +1,22 @@
+{
+  "name": "@shirabe/sample",
+  "version": "1.0.0",
+  "description": "Pluggable survey tool kit for Chromium, Firefox, Webkit",
+  "scripts": {
+    "start": "shirabe > output.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recruit-tech/shirabe.git"
+  },
+  "keywords": [],
+  "author": "progfay",
+  "license": "MIT",
+  "dependencies": {
+    "@shirabe/certificate-plugin": "^1.0.0",
+    "@shirabe/cli": "^1.0.0",
+    "@shirabe/console-plugin": "^1.0.0",
+    "@shirabe/mixed-content-plugin": "^1.0.0",
+    "playwright": "^1.9.0"
+  }
+}
