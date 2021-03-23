@@ -18,6 +18,9 @@
   "keywords": [],
   "author": "progfay",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@shirabe/plugin": "^1.0.0",
     "playwright": "^1.8.0"

@@ -12,6 +12,9 @@
   "keywords": [],
   "author": "progfay",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@shirabe/certificate-plugin": "^1.0.0",
     "@shirabe/cli": "^1.0.0",
