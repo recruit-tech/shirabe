@@ -6,7 +6,6 @@ export * from 'playwright'
 export type { Protocol } from 'playwright/types/protocol'
 export type {
   Report,
-  ReportOptions,
   Reporter,
   ReportCenter,
   Risk,

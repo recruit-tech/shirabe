@@ -1,3 +1,5 @@
+import { EventEmitter } from 'events'
+
 export interface Risk<Payload = any> {
   type: string
   pluginName?: string
@@ -15,10 +17,6 @@ export interface Report extends Risk<any> {
   readonly url: string
 }
 
-export interface ReportOptions {
-  verbose?: boolean
-}
-
 export interface Reporter {
   report: <Payload = any>(risk: Risk<Payload>) => void
 }
@@ -30,20 +28,23 @@ export interface ReportCenter {
     url: string,
     browser: BrowserInfo,
   ) => Reporter
+  on: (event: 'report', listener: (report: Report) => void) => void
 }
 
-export function createReportCenter(options?: ReportOptions): ReportCenter {
+export function createReportCenter(): ReportCenter {
   const reports: Report[] = []
+  const emitter = new EventEmitter()
   return {
     getReports: () => reports,
     createReporter: (plugin, url, browser) => ({
       report: risk => {
         const report: Report = { ...risk, plugin, url, browser }
-        if (options?.verbose ?? false) {
-          console.warn(report)
-        }
+        emitter.emit('report', report)
         reports.push(report)
       },
     }),
+    on: (event, listener) => {
+      emitter.on(event, listener)
+    },
   }
 }

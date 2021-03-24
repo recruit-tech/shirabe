@@ -2,12 +2,7 @@ import { chromium } from 'playwright'
 import { runChromiumScene } from './chromium'
 
 import type { Page, LaunchOptions, BrowserContextOptions } from 'playwright'
-import type {
-  Plugin,
-  BrowserInfo,
-  ReportOptions,
-  ReportCenter,
-} from '@shirabe/plugin'
+import type { Plugin, BrowserInfo, ReportCenter } from '@shirabe/plugin'
 
 export interface SceneRunner {
   run: (url: string) => Promise<void>
@@ -19,7 +14,6 @@ export interface RunnerOptions {
   launchOptions?: LaunchOptions
   browserContextOptions?: BrowserContextOptions
   gotoOptions?: Parameters<Page['goto']>[1]
-  reportOptions?: ReportOptions
 }
 
 export async function createChromiumSceneRunner(

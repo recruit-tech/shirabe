@@ -4,7 +4,7 @@ import { ReportCenter } from '@shirabe/plugin'
 import type { Plugin } from '@shirabe/plugin'
 import type { RunnerOptions } from '@shirabe/core'
 
-export interface Config {
+export interface RunnerConfig {
   urls?: string[]
   plugins?: Plugin[]
   options?: RunnerOptions
@@ -12,7 +12,7 @@ export interface Config {
 
 export async function runChromiumScenes(
   reportCenter: ReportCenter,
-  config: Config,
+  config: RunnerConfig,
 ): Promise<void> {
   const chromiumSceneRunner = await createChromiumSceneRunner(
     config.plugins ?? [],

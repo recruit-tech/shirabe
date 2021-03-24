@@ -2,7 +2,13 @@ import { runChromiumScenes } from './index'
 import { createReportCenter } from '@shirabe/plugin'
 import path from 'path'
 
-import type { Config } from './index'
+import type { RunnerConfig } from './index'
+
+interface ReportOptions {
+  verbose?: boolean
+}
+
+type Config = RunnerConfig & { options?: { reportOptions?: ReportOptions } }
 
 const DEFAULT_CONFIG: Required<Config> = {
   urls: [],
@@ -19,7 +25,12 @@ function getUserDefinedConfig(): Required<Config> {
 
 async function main(): Promise<void> {
   const config = getUserDefinedConfig()
-  const reportCenter = createReportCenter(config.options?.reportOptions)
+  const reportCenter = createReportCenter()
+  reportCenter.on('report', report => {
+    if (config.options.reportOptions?.verbose === true) {
+      console.warn(report)
+    }
+  })
   await runChromiumScenes(reportCenter, config)
   console.log(JSON.stringify(reportCenter.getReports(), undefined, 2))
   process.exit(0)
