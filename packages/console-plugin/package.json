@@ -1,6 +1,6 @@
 {
   "name": "@shirabe/console-plugin",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Pluggable survey tool kit for Chromium, Firefox, Webkit",
   "main": "dist/index.js",
   "files": [
@@ -42,6 +42,6 @@
     "typescript": "4.1.3"
   },
   "dependencies": {
-    "@shirabe/plugin": "^1.0.0"
+    "@shirabe/plugin": "^0.0.1"
   }
 }

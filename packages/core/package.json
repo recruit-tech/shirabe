@@ -1,6 +1,6 @@
 {
   "name": "@shirabe/core",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Pluggable survey tool kit for Chromium, Firefox, Webkit",
   "main": "dist/index.js",
   "files": [
@@ -22,7 +22,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@shirabe/plugin": "^1.0.0",
+    "@shirabe/plugin": "^0.0.1",
     "playwright": "^1.8.0"
   },
   "devDependencies": {
