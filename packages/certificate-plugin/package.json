@@ -1,6 +1,6 @@
 {
   "name": "@shirabe/certificate-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Pluggable survey tool kit for Chromium, Firefox, Webkit",
   "main": "dist/index.js",
   "files": [
@@ -43,6 +43,6 @@
   },
   "dependencies": {
     "@fidm/x509": "^1.2.1",
-    "@shirabe/plugin": "^0.0.2"
+    "@shirabe/plugin": "^0.0.3"
   }
 }

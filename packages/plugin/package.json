@@ -1,6 +1,6 @@
 {
   "name": "@shirabe/plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Pluggable survey tool kit for Chromium, Firefox, Webkit",
   "main": "dist/index.js",
   "files": [
