@@ -1,6 +1,6 @@
 {
   "name": "@shirabe/sample",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Pluggable survey tool kit for Chromium, Firefox, Webkit",
   "scripts": {
     "start": "shirabe > output.json"
@@ -16,10 +16,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@shirabe/certificate-plugin": "^1.0.0",
-    "@shirabe/cli": "^1.0.0",
-    "@shirabe/console-plugin": "^1.0.0",
-    "@shirabe/mixed-content-plugin": "^1.0.0",
+    "@shirabe/certificate-plugin": "^0.0.1",
+    "@shirabe/cli": "^0.0.1",
+    "@shirabe/console-plugin": "^0.0.1",
+    "@shirabe/mixed-content-plugin": "^0.0.1",
     "playwright": "^1.9.0"
   }
 }
